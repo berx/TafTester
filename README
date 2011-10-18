@@ -1,0 +1,12 @@
+
+just some ideas - nothing useful ...
+
+CLASSPATH=.:/Users/berx/TafTester/instantclient_10_2/classes12.jar:/Users/berx/TafTester/instantclient_10_2/ojdbc14.jar
+CLASSPATH=.:/Users/berx/TafTester/instantclient_10_2/ojdbc14.jar
+export DYLD_LIBRARY_PATH=/Users/berx/TafTester/instantclient_10_2
+
+java TafTester.TafTester cfg=opsoracle_oci.cfg
+java -Duser.language=en  TafTester.TafTester cfg=vax_thin.cfg
+
+
+cp TafTester.java TafTester.`date +"%y%m%d:%H%M%S"`.java
