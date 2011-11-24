@@ -8,4 +8,8 @@ set CLASSPATH=.\sk\diko\manageFiles.jar;%CLASSPATH%
 
 javac TafTester.java
 
+mkdir TafTester 
+
+mv TafTester.class .\TafTester
+
 pause
