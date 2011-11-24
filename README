@@ -1,12 +1,20 @@
 
 just some ideas - nothing useful ...
 
+* the file ./sk/diko/manageFiles.jar is needed and not part of this distribution!
+* the directory .TafTester is needed as java is searching for the .class file there 
+
+Commands:
+exec - enter sql to execute
+next - next one result
+more - bunch of results
+rest - all remained results
+help - display this help
+exit - exit
+
+
 CLASSPATH=.:/Users/berx/TafTester/instantclient_10_2/classes12.jar:/Users/berx/TafTester/instantclient_10_2/ojdbc14.jar
 CLASSPATH=.:/Users/berx/TafTester/instantclient_10_2/ojdbc14.jar
 export DYLD_LIBRARY_PATH=/Users/berx/TafTester/instantclient_10_2
-
-java TafTester.TafTester cfg=opsoracle_oci.cfg
-java -Duser.language=en  TafTester.TafTester cfg=vax_thin.cfg
-
 
 cp TafTester.java TafTester.`date +"%y%m%d:%H%M%S"`.java
