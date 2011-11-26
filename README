@@ -18,3 +18,15 @@ CLASSPATH=.:/Users/berx/TafTester/instantclient_10_2/ojdbc14.jar
 export DYLD_LIBRARY_PATH=/Users/berx/TafTester/instantclient_10_2
 
 cp TafTester.java TafTester.`date +"%y%m%d:%H%M%S"`.java
+
+
+# fine for 64-thin
+
+export BITS=64
+
+export ORACLE_HOME=/Users/berx/TafTester/instantclient_10_2_$BITS
+export PATH=$PATH:$ORACLE_HOME
+export CLASSPATH=$CLASSPATH:.:$ORACLE_HOME:$ORACLE_HOME/classes12.jar
+
+
+java -d$BITS TafTester.TafTester cfg=VAX_thin.cfg
