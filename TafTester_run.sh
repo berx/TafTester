@@ -29,6 +29,10 @@ export PATH=$PATH:$ORACLE_HOME
 #set CLASSPATH=.:.\sk\diko\manageFiles.jar;%ORACLE_HOME%\jdbc\lib\ojdbc6.jar;%CLASSPATH%
 export CLASSPATH=$CLASSPATH:.:$ORACLE_HOME:$ORACLE_HOME/classes12.jar
 
+# for oci
+export CLASSPATH=$CLASSPATH:$ORACLE_HOME/ojdbc14.jar
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+
 unset CONFIG_FILE
 unset jdbc
 while [ -z $CONFIG_FILE ] ; do
@@ -42,5 +46,5 @@ done
 
 echo $CONFIG_FILE 
 
-java -d$BITS TafTester.TafTester cfg=$CONFIG_FILE
+java -d$BITS  -Djava.library.path=$ORACLE_HOME  TafTester.TafTester cfg=$CONFIG_FILE
 
